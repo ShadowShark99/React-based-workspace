@@ -14,7 +14,7 @@ const Pomodoro = ({time,cock=true}: Props) => {
     cock = false;
     console.log("Pomodoro mounted");
     start(time);
-  }, [start]);
+  }, []);
 }
 
   return (
