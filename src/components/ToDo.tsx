@@ -6,11 +6,14 @@ import ToDoAdd from "./ToDoAdd";
 const ToDo = () => {
   const [todoList,setTodoList] = useState(["wake up","eat food","play MC","sleep"]);
   const [todoItem,setTodoItem] = useState("");
- 
+
+  // const handleDelete = (index) => {
+  //     setTodoList(todoList.filter((_,i)=> i !== index));
+  // }
   return (
     <>
     <div className="tdTitle">ToDo</div>
-    <ToDoShow tdList={todoList}></ToDoShow>
+    <ToDoShow tdList={todoList} setList={setTodoList}></ToDoShow>
     <ToDoAdd onItemChange={setTodoItem} onAdd={setTodoList} addTD={todoItem} tdList={todoList}></ToDoAdd>
     </>
   )
