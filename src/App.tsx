@@ -5,6 +5,7 @@ import Auth from "./components/Auth";
 import Pomodoro from "./components/Pomodoro";
 import Title from "./components/Title"
 import SiteList from "./components/SiteList";
+import ToDo from "./components/ToDo";
 
 const App = () => {
   let pomoTime = 3800;
@@ -27,6 +28,7 @@ const App = () => {
     <Pomodoro time={pomoTime}></Pomodoro>
     <AddSites onAddSite={setSites }></AddSites>
     <SiteList siteL={sites}></SiteList>
+    <ToDo></ToDo>
     </div>
     </>
   )
