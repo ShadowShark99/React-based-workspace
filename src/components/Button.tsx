@@ -1,11 +1,12 @@
 interface Props{
   children: string;
+  url: string;
 }
 
-const Button = ({children}: Props) => {
+const Button = ({children,url}: Props) => {
   return (
-    <form target="_blank" action={children}>
-      <button className="btn btn-primary">Website</button>
+    <form target="_blank" action={url}>
+      <button className="btn btn-primary">{children}</button>
     </form>
   )
 }
