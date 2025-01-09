@@ -1,3 +1,5 @@
+import "./ToDoShow.css"
+
 interface Props{
   tdList: string[];
   setList?: any;
@@ -6,15 +8,14 @@ interface Props{
 
 const ToDoShow = ({tdList,setList}: Props) => {
   return (
-    <>
-    <div>cock</div>
+    <div className="tdListDiv">
     <ul className="list-group">
       {tdList.map((tdItem,index) => (<li className="list-group-item" key={index}>
         {tdItem}
         <button className="btn-close" onClick={()=>setList(tdList.filter((_,i)=>i !== index ))}></button>
       </li>))}
     </ul>
-    </>
+    </div>
   )
 }
 
