@@ -12,9 +12,12 @@ const ToDo = () => {
   // }
   return (
     <>
-    <div className="tdTitle">ToDo</div>
-    <ToDoShow tdList={todoList} setList={setTodoList}></ToDoShow>
-    <ToDoAdd onItemChange={setTodoItem} onAdd={setTodoList} addTD={todoItem} tdList={todoList}></ToDoAdd>
+    <div className="todo-column">
+      <div className="tdTitle">To-do/schedule</div>
+      <ToDoShow tdList={todoList} setList={setTodoList}></ToDoShow>
+      <ToDoAdd onItemChange={setTodoItem} onAdd={setTodoList} addTD={todoItem} tdList={todoList}></ToDoAdd>
+      
+    </div>
     </>
   )
 }

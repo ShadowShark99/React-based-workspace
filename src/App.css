@@ -1,0 +1,17 @@
+.pomobox{
+  padding: 20px;
+  background-color: lavender;
+  text-align: center;
+}
+
+.workin{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  background-color: aliceblue;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}

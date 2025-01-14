@@ -1,24 +1,20 @@
-import useCountdown from "../useCountdown"
-import { useEffect } from "react";
+import { useState } from "react";
+import Pomomode from "./Pomomode"
+import Timer from "./Timer"
+import Pause from "./Pause";
 
 interface Props{
-  time: number;
-  cock?: boolean;
+  time0: any;
 }
-
-const Pomodoro = ({time,cock=true}: Props) => {
-  const { secondsLeft, start } = useCountdown();
-  // Call start only once when the component mounts
-  if(cock){
-  useEffect(() => {
-    cock = false;
-    console.log("Pomodoro mounted");
-    start(time);
-  }, []);
-}
-
+const Pomodoro = ({time0}:Props) => {
+  const[pMode,setPMode] = useState(0);
+  const[paused,setPaused] = useState(false);
   return (
-    <div>Seconds left: {secondsLeft}</div>
+    <div>
+      <Pomomode setPM={setPMode}></Pomomode>
+      <Timer time={time0} pMode={pMode} paused={paused}></Timer>
+      <Pause setP={setPaused} p={paused}></Pause>
+    </div>
   )
 }
 

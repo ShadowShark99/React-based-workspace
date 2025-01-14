@@ -2,7 +2,7 @@ import './Title.css'
 
 const Title = () => {
   return (
-    <div className="title">Title <strong>Balls</strong></div>
+    <div className="title"><strong>Username</strong>WorkSpace</div>
   )
 }
 

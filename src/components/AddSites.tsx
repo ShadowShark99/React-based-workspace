@@ -1,7 +1,6 @@
-import { memo, useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import Button from './Button';
 import SubSite from './SubSite';
 
 interface Props{
