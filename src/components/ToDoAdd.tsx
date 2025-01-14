@@ -8,10 +8,15 @@ interface Props{
 const ToDoAdd = ({onItemChange,onAdd,addTD,tdList}: Props) => {
   return (
     <>
-      <div>ToDoAdd</div>
       <label>Add to List: </label>
-      <input type="text" onChange={(e)=>onItemChange(e.target.value)}></input>
-      <button type="submit" onClick={()=>onAdd([...tdList,addTD])}> Add item </button>
+      <input type="text" onChange={(e)=>onItemChange(e.target.value)} value={addTD}></input>
+      <button type="submit" onClick={
+        ()=>{
+          if(addTD !== "")
+            onAdd([...tdList,addTD]); 
+          onItemChange("");
+        }
+        }> Add item </button>
     </>
   )
 }

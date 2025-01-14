@@ -1,3 +1,11 @@
 .tdListDiv{
   width: 500px;
 }
+
+.todo-item{
+  display: flex;
+}
+
+.btn-close{
+  margin-left: auto;
+}
