@@ -3,17 +3,17 @@ import Pomomode from "./Pomomode"
 import Timer from "./Timer"
 import Pause from "./Pause";
 
-interface Props{
-  time0: any;
-}
-const Pomodoro = ({time0}:Props) => {
+const Pomodoro = () => {
   const[pMode,setPMode] = useState(0);
   const[paused,setPaused] = useState(false);
+  const[cycle,setCycle] = useState(1);
   return (
     <div>
-      <Pomomode setPM={setPMode}></Pomomode>
-      <Timer time={time0} pMode={pMode} paused={paused}></Timer>
+      <Pomomode setPM={setPMode} pMode={pMode}></Pomomode>
+      <Timer pMode={pMode} paused={paused} cycle={cycle} setCycle={setCycle} setPMode={setPMode} setPaused={setPaused}></Timer>
       <Pause setP={setPaused} p={paused}></Pause>
+      <div>#{cycle}</div>
+      <div>Time to focus!</div>
     </div>
   )
 }

@@ -1,0 +1,21 @@
+.pause-button{
+  position: relative;
+}
+
+.pause-button:hover .pause-button-tooltip{
+  opacity: 1;
+}
+
+.pause-button-tooltip{
+  position: absolute;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s;
+  background-color: antiquewhite;
+  border-style: solid;
+  border-radius: 2px;
+  color: black;
+}

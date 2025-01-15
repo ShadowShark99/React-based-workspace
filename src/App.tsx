@@ -2,7 +2,6 @@ import { useState } from "react";
 import AddSites from "./components/AddSites";
 import Auth from "./components/Auth";
 //import Button from "./components/Button";
-import Timer from "./components/Timer";
 import Title from "./components/Title"
 import SiteList from "./components/SiteList";
 import ToDo from "./components/ToDo";
@@ -11,7 +10,6 @@ import Pomodoro from "./components/Pomodoro";
 import SignInButton from "./components/SignInButton";
 
 const App = () => {
-  let pomoTime = 3800;
   //set states
   const [sites,setSites] = useState([["How To React","https://react.dev/learn/thinking-in-react"]]);
 
@@ -32,7 +30,7 @@ const App = () => {
     <ToDo/>
       <div className="pomobox">
         
-      <Pomodoro time0={pomoTime}></Pomodoro>
+      <Pomodoro></Pomodoro>
       </div>
     </div>
     <AddSites onAddSite={setSites }></AddSites>

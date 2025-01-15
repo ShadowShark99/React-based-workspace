@@ -1,3 +1,4 @@
+import "./Pause.css"
 
 interface Props{
   setP: any;
@@ -12,7 +13,12 @@ const Pause = ({setP,p}: Props) => {
       <button 
       onClick={() => {setP(!p);}} 
       type="button" 
-      className="btn btn-primary">Pause</button>
+      className="btn btn-primary pause-button"
+      >
+        {p ? ("Start"):("Pause")}
+        <div className="pause-button-tooltip">Spacebar - Pause</div>
+      </button>
+      
     </div>
   )
 }

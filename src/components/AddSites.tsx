@@ -37,15 +37,6 @@ const AddSites = ({onAddSite} : Props) => {
           
         </div>
       </Popup>
-      <h3> Add Sites </h3>
-          {/* <form> */}
-            <label> Site Name: </label>
-            <input type="text" name="siteName" onChange={(e) => setSiteName(e.target.value)} />
-            <label> Site URL: </label>
-            <input type="text" name="siteURL" onChange={(e) => setSiteURL(e.target.value)}/>
-            <button type="submit" 
-                  onClick={() => onAddSite((sites) => [...sites, [siteName, siteURL]])}> Add Site </button>
-          {/* </form> */}
     </div>
     </>
   )
