@@ -1,5 +1,5 @@
 import useCountdown from "../useCountdown"
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import "./Timer.css";
 
 
@@ -21,13 +21,13 @@ const Timer = ({pMode,paused, cycle, setCycle,setPMode, setPaused}: Props) => {
     setPaused(true);
     console.log("Pomodoro mounted");
       //900
-      let time = 6;
+      let time = 900;
       if(pMode === 0)
         //1800
-        time = 12;
+        time = 1800;
       else if(pMode ===1)
         //300
-        time = 2;
+        time = 300;
 
     start(time);
     return () => {
